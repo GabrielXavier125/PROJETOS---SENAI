@@ -1,0 +1,22 @@
+* Situação-Problema Contexto: A "TechFit," uma rede de academias de ginástica, busca modernizar a gestão de suas operações e melhorar a experiência de seus clientes. Atualmente, a TechFit utiliza um sistema antigo e ineficiente, baseado em planilhas e controles manuais, o que gera diversos problemas. Baseado nesse contexto, faça um site para está academia, utilize as linguagens de html, css, java script, php e mysql. Utilize também a arquitetura MVC e os métodos CRUD. 
+
+Baseado nisso desenvolva oque se pede abaixo sobre os requisitos necessários para o site da academia "TechFit" A TechFit reconhece que esses problemas estão afetando a satisfação dos clientes, aumentando os custos operacionais e limitando o crescimento da rede. Desafio: Desenvolver um sistema de software completo para a TechFit, capaz de solucionar os problemas mencionados e otimizar a gestão da academia. O sistema deve contemplar as seguintes funcionalidades: 
+
+* Módulo de Agendamento Online: 
+- Permitir que os alunos visualizem os horários e modalidades das aulas, agendem e cancelem suas participações, e criem listas de espera. 
+- Gerar relatórios de ocupação das turmas e enviar notificações aos alunos sobre alterações de horário. 
+
+* Módulo de Controle de Acesso: 
+- Integrar com catracas eletrônicas ou outros dispositivos de identificação (QR Code, biometria) para controlar o acesso dos alunos à academia. 
+- Registrar a frequência dos alunos e gerar relatórios de utilização. 
+
+* Módulo de Comunicação: 
+- Permitir o envio de mensagens personalizadas aos alunos, segmentadas por perfil (modalidade, frequência, etc.). 
+- Disponibilizar um canal de comunicação para que os alunos tirem dúvidas, enviem sugestões e recebam suporte. 
+
+* Módulo de Avaliação Física: 
+- Permitir o registro e o acompanhamento das avaliações físicas dos alunos, com gráficos de evolução e sugestões de treinos personalizados. 
+- Gerar alertas sobre a necessidade de novas avaliações e enviar lembretes aos alunos. 
+
+* Painel Administrativo: 
+- Disponibilizar um painel para que os funcionários da academia gerenciem todas as funcionalidades do sistema, cadastrem alunos, turmas, modalidades, etc., e gerem relatórios gerenciais.
