@@ -124,6 +124,38 @@ class AgendamentoController extends Controller {
         $this->redirect('/agendamentos');
     }
 
+    public function confirmar() {
+        $this->requireLogin('admin');
+        
+        $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
+        
+        if (!$id) {
+            $_SESSION['mensagem_erro'] = 'ID de agendamento inválido.';
+            $this->redirect('/agendamentos');
+        }
+        
+        $agendamentoModel = new Agendamento();
+        $agendamento = $agendamentoModel->find($id);
+        
+        if (!$agendamento) {
+            $_SESSION['mensagem_erro'] = 'Agendamento não encontrado.';
+            $this->redirect('/agendamentos');
+        }
+        
+        if ($agendamento['status'] !== 'pendente') {
+            $_SESSION['mensagem_erro'] = 'Apenas agendamentos pendentes podem ser confirmados.';
+            $this->redirect('/agendamentos');
+        }
+        
+        if ($agendamentoModel->update($id, ['status' => 'confirmado'])) {
+            $_SESSION['mensagem_sucesso'] = 'Aula Confirmada com Sucesso!';
+        } else {
+            $_SESSION['mensagem_erro'] = 'Erro ao confirmar agendamento.';
+        }
+        
+        $this->redirect('/agendamentos');
+    }
+
     public function relatorioOcupacao() {
         $this->requireLogin('admin');
         $turmaModel = new Turma();
